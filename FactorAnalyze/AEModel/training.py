@@ -4,7 +4,7 @@ from model import AE
 
 # Model Initialization
 model = AE()
-data = []
+data = [] #get data from somewhere
 
 def train(model, data):
 # Validation using MSE Loss function

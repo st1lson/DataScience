@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 
 sc = StandardScaler()
 
-data = []
+data = [] #read data
 
 def PCA_cleaning(data):
     new_data = sc.fit_transform(data)
