@@ -27,7 +27,7 @@ kmeans_kwargs = {
 # new_columns = [('Component ' + str(i)) for i in range(1, result.shape[1] + 1)]
 # data[new_columns] = result
 
-clusters = DBSCAN_method(data, 3)
+clusters = meanshift_method(data)
 #y_pred = clusters.predict(data)
 
 #data clustering
