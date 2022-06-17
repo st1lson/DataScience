@@ -21,7 +21,7 @@ def gaussian_mixture(data, clustersNumber):
     return GaussianMixture(n_components=clustersNumber).fit(data)
 
 def DBSCAN_method(data, clustersNumber):
-    return DBSCAN(eps=0.30, min_samples=clustersNumber).fit(data)
+    return DBSCAN(eps=0.5, min_samples=20000).fit(data)
 
 def spectral_clustering(data, clustersNumber):
     return SpectralClustering(n_clusters=clustersNumber).fit(data)
