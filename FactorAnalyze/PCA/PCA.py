@@ -1,10 +1,9 @@
 # performing preprocessing part
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+import pandas as pd
 
 sc = StandardScaler()
-
-data = [] #read data
 
 def PCA_cleaning(data):
     new_data = sc.fit_transform(data)
