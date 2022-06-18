@@ -7,6 +7,7 @@ from clusterization.clustersNumber import gap_statistics
 from clusterization.clustering import kmeans_method
 from clusterization.clustersNumber import draw_dendogram
 from clusterization.clustering import DBSCAN_method
+from clusterization.clustering import DBSCAN_find_eps
 from clusterization.clustering import optics_method
 from clusterization.clustering import meanshift_method
 from clusterization.clustering import gaussian_mixture
@@ -26,7 +27,7 @@ kmeans_kwargs = {
 # result = PCA_cleaning(data)
 # new_columns = [('Component ' + str(i)) for i in range(1, result.shape[1] + 1)]
 # data[new_columns] = result
-
+#DBSCAN_find_eps(data)
 clusters = optics_method(data)
 #y_pred = clusters.predict(data)
 

@@ -18,7 +18,7 @@ def kmeans_method(features, kmeans_kwargs):
 def gaussian_mixture(data, clustersNumber):
     return GaussianMixture(n_components=clustersNumber).fit(data)
 
-def DBSCAN_method(data):
+def DBSCAN_find_eps(data):
     nn_model = NearestNeighbors(n_neighbors=2)
     nn_model.fit(data)
     distances, indices = nn_model.kneighbors(data)
@@ -27,12 +27,12 @@ def DBSCAN_method(data):
     plt.plot(distances)
     plt.show()
 
+def DBSCAN_method(data, eps):
+    return DBSCAN(eps=eps, min_samples=6).fit(data)
+
 def optics_method(data):
     return OPTICS(min_samples=10).fit(data)
-    return DBSCAN(eps=5.85, min_samples=6).fit(data)
 
-def optics_method(data, clustersNumber):
-    return OPTICS(min_samples=clustersNumber).fit(data)
 
 def meanshift_method(data):
     bandwidth = estimate_bandwidth(data, quantile=0.5)
