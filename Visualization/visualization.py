@@ -1,6 +1,6 @@
 import pandas as pd
 import plotly.express as px
-from clusterization.clustering import spectral_clustering
+from sklearn.cluster import dbscan
 from clusterization.clustersNumber import elbow_method
 from clusterization.clustersNumber import silhouette_method
 from clusterization.clustersNumber import gap_statistics
@@ -27,7 +27,7 @@ kmeans_kwargs = {
 # new_columns = [('Component ' + str(i)) for i in range(1, result.shape[1] + 1)]
 # data[new_columns] = result
 
-clusters = meanshift_method(data)
+clusters = optics_method(data)
 #y_pred = clusters.predict(data)
 
 #data clustering
