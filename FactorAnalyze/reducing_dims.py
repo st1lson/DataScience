@@ -5,7 +5,6 @@ import numpy as np
 from AEModel.inference import Inference
 from PCA.PCA import PCA_cleaning
 
-
 inf = Inference("/home/vlad/Projects/DataScience/FactorAnalyze/AEModel/AEMode.pt")
 data = pd.read_csv('/home/vlad/Projects/DataScience/data/preprocessed.csv', sep=',', encoding='utf8').drop(labels='Unnamed: 0', axis=1)
 numeric_data = data[['age', 'mil_rank', 'edu_lvl']]
